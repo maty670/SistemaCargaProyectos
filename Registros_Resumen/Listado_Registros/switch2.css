@@ -1,0 +1,181 @@
+:root{
+  --width-barra-all: 50px;
+  --height-barra-all: 16px;
+  --background-barra-unlock-all: rgb(200,200,200,0.8);
+  --background-barra-lock-all: rgba(86, 40, 238, 0.35);
+  --border-radius-barra-all: 12px;
+
+  --width-esfera-all: 15px;
+  --height-esfera-all: 15px;
+  --background-esfera-unlock-all: #fff;
+  --background-esfera-lock-all: #fff;
+
+  --padding-left-switch-all: 0px;
+
+  --background-candado-unlock-all: #99A3BA;
+  --background-candado-lock-all: #5628EE;
+
+}
+
+
+
+
+tr.header td.cell_switch div{
+  background: #e9e9e9;
+  width: 50px;
+  height: 2.2rem;
+  position: sticky;
+}
+
+.switch_all {
+  height: 20px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+.switch_all input {
+  display: none;
+}
+.switch_all input + span {
+  padding-left: var(--padding-left-switch-all);
+  min-height: 24px;
+  line-height: 20px;
+  top: 6px;
+  display: inline-block;
+  color: var(--background-candado-unlock-all);
+  position: relative;
+  vertical-align: middle;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+.switch_all input + span:before, .switch_all input + span:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  border-radius: var(--border-radius-barra-all);
+}
+.switch_all input + span:before {
+  top: 3px;
+  left: 0px;
+  width: var(--width-barra-all);
+  height: var(--height-barra-all);
+  background: var(--background-barra-unlock-all);
+  transition: all 0.3s ease;
+}
+
+/*------------------------------*/
+.switch_all input + span:after {
+  width: var(--width-esfera-all);
+  height: var(--height-esfera-all);
+  background: var(--background-esfera-unlock-all);
+  top: 4px;
+  left: 4px;
+  box-shadow: 0 1px 3px rgba(18, 22, 33, 0.1);
+  transition: all 0.45s ease;
+}
+.switch_all input + span em {
+  width: 8px;
+  height: 7px;
+  background: var(--background-candado-unlock-all);
+  position: absolute;
+  left: 8px;
+  bottom: 7px;
+  border-radius: 2px;
+  display: block;
+  z-index: 1;
+  transition: all 0.45s ease;
+}
+.switch_all input + span em:before {
+  content: "";
+  width: 2px;
+  height: 2px;
+  border-radius: 1px;
+  background: #fff;
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 50%;
+  margin: -1px 0 0 -1px;
+}
+/**-------------------------*/
+.switch_all input + span em:after {
+  content: "";
+  display: block;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border: 1px solid #99A3BA;
+  border-bottom: 0;
+  width: 6px;
+  height: 4px;
+  left: 1px;
+  bottom: 7px;
+  position: absolute;
+  z-index: 1;
+  transform-origin: 0 100%;
+  transition: all 0.45s ease;
+  transform: rotate(-35deg) translate(0, 1px);
+}
+.switch_all input + span strong {
+  font-weight: normal;
+  position: relative;
+  display: block;
+  top: 10px;
+}
+
+
+/*##################################*/
+.switch_all input + span strong:before, .switch_all input + span strong:after {
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+  font-family: "Mukta Malar", Arial;
+  -webkit-backface-visibility: hidden;
+}
+.switch_all input + span strong:before {
+  content: "";
+  transition: all 0.3s ease 0.2s;
+}
+.switch_all input + span strong:after {
+  content: "";
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #5628EE;
+  transition: all 0.3s ease;
+  transform: translate(2px, 0);
+}
+/*##################################*/
+
+
+
+
+.switch_all input:checked + span:before {
+  background: var(--background-barra-lock-all);
+}
+.switch_all input:checked + span:after {
+  background: var(--background-esfera-lock-all);
+  transform: translate(26px, 0);
+}
+.switch_all input:checked + span em {
+  transform: translate(26px, 0);
+  background: var(--background-candado-lock-all);
+}
+.switch_all input:checked + span em:after {
+  border-color: var(--background-candado-lock-all);
+  transform: rotate(0deg) translate(0, 0);
+}
+.switch_all input:checked + span strong:before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  transform: translate(-2px, 0);
+}
+.switch_all input:checked + span strong:after {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0);
+  transition: all 0.3s ease 0.2s;
+}
+

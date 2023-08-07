@@ -1,0 +1,5 @@
+• Cuando un input registre una accion de copiado, marcar ese input como lo hace un excel
+- Validar que no se puedan ingresar registros con comillas " ", para evitar errores en la consulta sql
+- Borrar todos los required y que solo este el del codigo
+- Cuando se pege en la columna nombre, que se peguen en los siguientes campos el email y el telefono si el copy
+trae un texto separado por espacios

@@ -1,0 +1,292 @@
+:root {
+ 
+  --font-family-number: 'Castoro Titling', cursive;
+  --font-family-simpleText: 'Barlow', sans-serif;
+  --font-weight-simpleText: 400;
+  --font-weight-titleText: 800;
+  --font-weight-bold: bold;
+  --color-white:#fff;
+  --color-darkBlue: #0e3358;
+  --background-color-titulo_cuadro:rgb(49,134,155);
+  --background-color-titulo_convocatoria:rgb(251,212,180);
+  --background-color-total_convocatoria:rgb(184,204,228);
+  --background-color-total_semana:rgb(214,227,188);
+  --background-color-total_todas_convocatorias:rgb(253,233,217);
+  --background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); 
+  --font-size-bigText:1rem;
+  --font-size-titleText:0.8rem;
+  --font-size-simpleText:0.75rem;
+  --icon-size: 1.2rem;
+  --height-btn:2rem;
+
+}
+
+body{
+	padding: 0;
+	margin: 0;
+
+	background:linear-gradient(to right top,#e6e6e6 ,#dbd3bd);
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.form{
+	display: flex;
+	flex-direction: row;
+	column-gap: 5%;
+}
+
+.div_contenedor_formulario{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	justify-content: center;
+	column-gap: 10%;
+	align-items: center;
+	margin: 1% 0;
+}
+
+.div_contenedor_formulario select{
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	width: 7rem;
+	height: var(--height-btn);
+	text-align: left;
+	position: relative;
+    border: 1px solid #555;
+
+	font-family: var(--font-family-number);
+	font-weight: var(--font-weight-titleText);
+	font-size: calc(var(--font-size-simpleText)+0.5rem);
+	color: var(--color-darkBlue);
+	
+	cursor: pointer;
+	position: relative;
+	padding: 3px calc(2rem) 0px var(--icon-size);
+	border-radius: 4px;
+
+
+	background: url("/SistemaCargaProyectos/svg/calendar.svg") no-repeat scroll;
+	background-size: var(--icon-size);
+  	background-position: calc(7rem - 2rem) 50%;
+
+  	transition: all 0.25s ease;
+}
+
+.div_contenedor_formulario select:hover{
+	box-shadow: 0px 0px 0px 200px rgba(75,75,75,0.1) inset;
+}
+
+.div_contenedor_formulario select:focus{
+	outline:none;
+}
+
+
+
+
+.div_contenedor_formulario .img_refresh{
+	cursor: pointer;
+	width: calc(var(--icon-size) + 2px);
+	padding: 4px 4px;
+	filter: invert(14%) sepia(47%) saturate(1818%) hue-rotate(185deg) brightness(97%) contrast(94%);
+	transition: transform 0.25s ease , filter 0.25s ease;
+}
+
+.div_contenedor_formulario .img_refresh:hover{
+
+	filter: invert(18%) sepia(65%) saturate(6471%) hue-rotate(200deg) brightness(92%) contrast(78%);
+	border-radius: 4px; 
+	
+	transform: rotate(180deg);
+
+}
+
+
+
+
+
+.div_contenedor_formulario .btn_listado_registros{
+	height: var(--height-btn);
+
+
+	display: flex;
+	flex-direction: row;
+	font-family: var(--font-family-simpleText);
+	border: 1px solid #555;
+	cursor: pointer;
+	align-items: center;
+	padding: 0 1rem 0 2.8rem;
+	border-radius: 4px;
+	color: var(--color-darkBlue);
+	text-decoration: none;
+
+	background: url("/SistemaCargaProyectos/svg/database-solid.svg") no-repeat scroll;
+	background-size: var(--icon-size);
+  	background-position: 1rem 50%;
+}
+
+.btn_listado_registros:hover{
+	box-shadow: 0px 0px 0px 200px rgba(75,75,75,0.1) inset;
+	animation: mymove 0.35s ease-in alternate;
+
+}
+
+
+ @keyframes mymove{
+
+ 	0% {
+    	background-position: 1rem 50%;
+  	}
+  	25% {
+    	background-position: 1rem 25%;
+  	}
+  	75% {
+    	background-position: 1rem 5%;
+  	}
+
+  	75% {
+    	background-position: 1rem 55%;
+  	}
+  	100% {
+    	background-position: 1rem 50%;
+  	}
+ 
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.div_contenedor_tablas{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
+}
+
+.div_tabla_resumen{
+	margin: 0;
+}
+
+table{
+	border-collapse: separate;
+	border-spacing: 1px;
+
+}
+
+table th,
+table td{
+	text-align: left;
+	padding: 2px 5px;
+	color: #111;
+	outline: 1px solid rgb(100,100,100);
+	font-family: var(--font-family-simpleText);
+	font-size: var(--font-size-simpleText);
+}
+
+table tr:nth-child(even){
+	background: rgb(245,245,245);
+}
+
+table tr:nth-child(odd){
+	background: rgb(230,230,230);
+}
+
+table tr:hover td{
+	box-shadow: 0px 0px 50px 0px rgba(150,150,150,0.75) inset;
+
+}
+
+table tr:focus td{
+	box-shadow: 0px 0px 50px 0px rgba(80,80,80,1) inset;
+	color: white;
+}
+
+
+td{
+	font-weight: var(--font-weight-simpleText);
+}
+
+table .titulo_cuadro{
+	background: var(--background-color-titulo_cuadro);
+	color: var(--color-white);
+	font-family: var(--font-family-simpleText);
+	font-weight: var(--font-weight-simpleText);
+	font-size: : var(--font-size-bigText);
+	padding: 2% 100px;
+	text-align: center !important;
+
+	border:none;
+	border-top-left-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+    border-top-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+}
+
+table .fila_titulos{
+	position: sticky;
+	left: 0;
+	top:-1px;
+	z-index: 3;
+}
+
+th.titulo_convocatoria{
+	z-index: 3;
+	background: var(--background-color-titulo_convocatoria);
+	color: #000;
+	font-family: var(--font-family-simpleText);
+	font-weight: var(--font-weight-titleText);
+	padding: 2px 6px;
+	text-align: center !important;
+}
+
+table .fecha_text{
+	font-family: var(--font-family-simpleText);
+	font-weight: var(--font-weight-titleText);
+}
+
+table .number{
+	font-family: var(--font-family-number);
+	text-align: center;
+}
+
+table .total_convocatoria{
+	background: var(--background-color-total_convocatoria);
+	font-weight: var(--font-weight-bold);
+	font-size: var(--font-size-titleText);
+}
+
+table .total_semana{
+	background-color: var(--background-color-total_semana);
+	font-weight: var(--font-weight-bold);
+	font-size: var(--font-size-titleText);
+}
+
+table .total_todas_convocatorias{
+	background: var(--background-color-total_todas_convocatorias);
+	font-weight: var(--font-weight-bold);
+	font-size: var(--font-size-titleText);
+}
+
+
+
+
+
+
+

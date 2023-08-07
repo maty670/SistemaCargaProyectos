@@ -1,0 +1,22 @@
+:root{
+  --separacion: 0.5rem;
+  --font-family-number: 'Castoro Titling', cursive;
+  --font-family-simpleText: 'Barlow', sans-serif;
+  --font-weight-simpleText: 600;
+  --font-weight-titleText: 800;
+  --font-weight-bold: bold;
+  --color-white:#fff;
+  --color-black:#000;
+  --color-darkBlue: #0e3358;
+  --background-screen: linear-gradient(to right top,#ede9de ,#e4dece); 
+  --background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  --background-blue-gradient: linear-gradient(#577284, #333);
+  --cell-width:13.5rem;
+  --font-size-bigText:1.3rem;
+  --font-size-titleText:1.15rem;
+  --font-size-simpleText:0.9rem;
+  --icon-size: 1.2rem;
+  --height-cell-title: 2rem;
+  --height-cell-simple: 1.5rem;
+  --height-filtros-div: 3rem;
+}

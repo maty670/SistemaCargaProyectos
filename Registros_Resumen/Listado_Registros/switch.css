@@ -1,0 +1,187 @@
+:root{
+
+  --width-barra: 40px;
+  --height-barra: 16px;
+  --background-barra-unlock: rgb(200,200,200,0.8);
+  --background-barra-lock: rgba(86, 40, 238, 0.35);
+  --border-radius-barra: 12px;
+
+  --width-esfera: 15px;
+  --height-esfera: 15px;
+  --background-esfera-unlock: #fff;
+  --background-esfera-lock: #fff;
+
+  --padding-left-switch: 0px;
+
+  --background-candado-unlock: #99A3BA;
+  --background-candado-lock: #5628EE;
+
+}
+
+
+
+
+tr.row td.cell_switch div{
+  background: #efefef;
+  width: 50px;
+  height: 24px;
+  position: sticky;
+}
+
+.switch {
+  height: 20px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+.switch input {
+  display: none;
+}
+.switch input + span {
+  padding-left: var(--padding-left-switch);
+  min-height: 24px;
+  line-height: 20px;
+  display: inline-block;
+  color: var(--background-candado-unlock);
+  position: relative;
+  vertical-align: middle;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+.switch input + span:before, .switch input + span:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  border-radius: var(--border-radius-barra);
+}
+.switch input + span:before {
+  top: 3px;
+  left: 0px;
+  width: var(--width-barra);
+  height: var(--height-barra);
+  background: var(--background-barra-unlock);
+  transition: all 0.3s ease;
+}
+
+
+.switch input + span:after {
+  width: var(--width-esfera);
+  height: var(--height-esfera);
+  background: var(--background-esfera-unlock);
+  top: 4px;
+  left: 4px;
+  box-shadow: 0 1px 3px rgba(18, 22, 33, 0.1);
+  transition: all 0.45s ease;
+}
+.switch input + span em {
+  width: 8px;
+  height: 7px;
+  background: var(--background-candado-unlock);
+  position: absolute;
+  left: 8px;
+  bottom: 7px;
+  border-radius: 2px;
+  display: block;
+  z-index: 1;
+  transition: all 0.45s ease;
+}
+.switch input + span em:before {
+  content: "";
+  width: 2px;
+  height: 2px;
+  border-radius: 1px;
+  background: #fff;
+  position: absolute;
+  display: block;
+  left: 50%;
+  top: 50%;
+  margin: -1px 0 0 -1px;
+}
+
+.switch input + span em:after {
+  content: "";
+  display: block;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border: 1px solid #99A3BA;
+  border-bottom: 0;
+  width: 6px;
+  height: 4px;
+  left: 1px;
+  bottom: 7px;
+  position: absolute;
+  z-index: 1;
+  transform-origin: 0 100%;
+  transition: all 0.45s ease;
+  transform: rotate(-35deg) translate(0, 1px);
+}
+.switch input + span strong {
+  font-weight: normal;
+  position: relative;
+  display: block;
+  top: 10px;
+}
+
+
+
+.switch input + span strong:before, .switch input + span strong:after {
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+  font-family: "Mukta Malar", Arial;
+  -webkit-backface-visibility: hidden;
+}
+.switch input + span strong:before {
+  content: "";
+  transition: all 0.3s ease 0.2s;
+}
+.switch input + span strong:after {
+  content: "";
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #5628EE;
+  transition: all 0.3s ease;
+  transform: translate(2px, 0);
+}
+
+
+
+
+
+.switch input:checked + span:before {
+  background: var(--background-barra-lock);
+}
+.switch input:checked + span:after {
+  background: var(--background-esfera-lock);
+  transform: translate(18px, 0);
+}
+.switch input:checked + span em {
+  transform: translate(18px, 0);
+  background: var(--background-candado-lock);
+}
+.switch input:checked + span em:after {
+  border-color: var(--background-candado-lock);
+  transform: rotate(0deg) translate(0, 0);
+}
+.switch input:checked + span strong:before {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  transform: translate(-2px, 0);
+}
+.switch input:checked + span strong:after {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, 0);
+  transition: all 0.3s ease 0.2s;
+}
+
+*:before, *:after {
+  box-sizing: border-box;
+}
+
+
+
