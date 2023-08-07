@@ -9,7 +9,6 @@
   --color-black:#000;
   --color-darkBlue: #0e3358;
   --background-screen: linear-gradient(to right top,#efefef ,#e0e0e0); 
-  --background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
   --background-blue-gradient: linear-gradient(#577284, #333);
   --cell-width:13.5rem;
   --font-size-bigText:1.3rem;
@@ -173,7 +172,6 @@ table td.cell input.input_text{
 	width: 100%;
 	height: var(--height-cell);
 	height: var(--height-cell-simple);
-	box-shadow: 0px 0px 0px 1px rgba(100,100,100,0.5) inset;
 }
 
 
@@ -185,12 +183,6 @@ select{
 	color:var(--color-darkBlue);
 	font-weight: var(--font-weight-simpleText);
 }
-
-input.input_text:focus,
-select:focus{
-	outline: none;
-}
-
 
 
 
@@ -228,11 +220,11 @@ tr.row input{
 }
 
 tr.row:nth-child(even) input.input_text:read-only{
-	
+	box-shadow: 20px 20px 20px 20px inset rgb(170, 176, 187);
 }
 
 tr.row:nth-child(odd) input.input_text:read-only{
-	
+	box-shadow: 20px 20px 20px 20px inset rgb(213, 215, 221);
 }
 
 tr.row input.input_text:read-only{
@@ -252,17 +244,21 @@ tr.row input.block{
 }
 
 tr.row:nth-child(even) input.block{
-	
+	box-shadow: 20px 20px 20px 20px inset rgb(170, 176, 187);
 }
 
 tr.row:nth-child(odd) input.block{
-
+	box-shadow: 20px 20px 20px 20px inset rgb(213, 215, 221);
 }
 
 
 
 
-
+input.input_text:focus,
+select:focus{
+	outline: none;
+	box-shadow: 0px 0px 3px 1px rgba(0,0,0,1) inset !important;
+}
 
 
 
@@ -272,7 +268,7 @@ tr.row:nth-child(odd) input.block{
 
 
 #input_checked{
-  background-color: rgb(20, 20, 20);
+	box-shadow: 20px 20px 20px 20px rgba(0,0,0,1) inset !important;
   color: #fff;
 }
 
@@ -284,7 +280,10 @@ tr.row:nth-child(odd) input.block{
 }*/
 
 .dashed-animation{
-  background: linear-gradient(90deg, #333 50%, transparent 0) repeat-x, linear-gradient(90deg, #333 50%, transparent 0) repeat-x, linear-gradient(0deg, #333 50%, transparent 0) repeat-y, linear-gradient(0deg, #333 50%, transparent 0) repeat-y;
+  background: linear-gradient(90deg, #000 50%, transparent 0) repeat-x,
+			  linear-gradient(90deg, #000 50%, transparent 0) repeat-x,
+			  linear-gradient(0deg, #000 50%, transparent 0) repeat-y,
+			  linear-gradient(0deg, #000 50%, transparent 0) repeat-y;
   background-size: 20px 2px, 20px 2px, 2px 20px, 2px 20px;
   background-position: 0 0, 0 100%, 0 0, 100% 0;
   cursor: pointer;
