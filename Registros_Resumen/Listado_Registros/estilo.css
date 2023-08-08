@@ -1,15 +1,15 @@
 :root{
   --separacion: 0.5rem;
-  --font-family-number: 'Castoro Titling', cursive;
-  --font-family-simpleText: 'Barlow', sans-serif;
+  --font-family-number: Arial;
+  --font-family-simpleText: sans-serif;
   --font-weight-simpleText: 600;
   --font-weight-titleText: 800;
   --font-weight-bold: bold;
   --color-white:#fff;
   --color-black:#000;
   --color-darkBlue: #0e3358;
-  --background-screen: linear-gradient(to right top,#efefef ,#e0e0e0); 
-  --background-blue-gradient: linear-gradient(#577284, #333);
+  --background-screen: #e0e0e0; 
+  --background-darkBlue: #092036;
   --cell-width:13.5rem;
   --font-size-bigText:1.3rem;
   --font-size-titleText:1.15rem;
@@ -71,17 +71,17 @@ input[type="date"]:focus:in-range::-webkit-datetime-edit-text{
 
 /* Track */
 .contenedor_tabla::-webkit-scrollbar-track {
-  background:linear-gradient(#afc0d0,#999); 
+  background:#999; 
 }
  
 /* Handle */
 .contenedor_tabla::-webkit-scrollbar-thumb {
-  background: var(--background-blue-gradient);
+  background: var(--background-darkBlue);
 }
 
 /* Handle on hover */
 .contenedor_tabla::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(#3b5164,#333); 
+  background: #334757;
 }
 
 
@@ -93,11 +93,11 @@ input[type="date"]:focus:in-range::-webkit-datetime-edit-text{
 
 
 .green{
-	background: linear-gradient(rgb(26, 180, 23),rgb(10, 90, 10));
+	background: rgb(13, 121, 13);
 	color: #ddd;
 }
 .red{
-	background: linear-gradient(rgb(232, 23, 26),rgb(140, 10, 10));
+	background: rgb(173, 13, 13);
 	color: #ddd;
 }
 
@@ -142,7 +142,7 @@ table tr.header td.cell textarea{
 	color: var(--color-white);
   	font-size: var(--font-size-titleText);
   	font-family: Cambria;
-  	background: var(--background-blue-gradient);
+  	background: var(--background-darkBlue);
 }
 
 table tr.header td.cell textarea{
@@ -250,7 +250,6 @@ tr.row:nth-child(even) input.block{
 tr.row:nth-child(odd) input.block{
 	box-shadow: 20px 20px 20px 20px inset rgb(213, 215, 221);
 }
-
 
 
 

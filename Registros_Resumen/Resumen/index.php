@@ -90,7 +90,7 @@
 			},"250");
 
     		organismo = document.getElementById("organismo").innerHTML;
-			btn_listado_registros.href = `/SistemaCargaProyectos/Registros_Resumen/Listado_Registros/index.php?E=${organismo}&A=${anio_seleccionado}`;
+			btn_listado_registros.href = `/SistemaCargaProyectos/Registros_Resumen/Listado_Registros/index.php?O=${organismo}&A=${anio_seleccionado}`;
 
     	})
 	</script>
