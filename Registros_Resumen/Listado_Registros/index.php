@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<title>Registros <?php echo $_GET['O'] . " " . $_GET['A']; ?></title>
 	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="stylesheet" type="text/css" href="css/dropdown.css">
 	<link rel="stylesheet" type="text/css" href="switch.css">
 	<link rel="stylesheet" type="text/css" href="switch2.css">
 	<link rel="stylesheet" type="text/css" href="css/filtros_convocatorias.css">
@@ -49,7 +50,7 @@
 							</label>
 						</div>
 					</td>
-					<td class="cell_checkbox"></td>
+					<td class="cell_dropdown"></td>
 					<td class="cell cell_codigo">Código</td>
 					<td class="cell cell_nombre"><textarea readonly>Nombre</textarea></td>
 					<td class="cell cell_email"><textarea readonly>Email</textarea></td>
@@ -79,9 +80,18 @@
 								</label>
 							</div>
 						</td>
-						<td class="cell_checkbox">
-							<input type="checkbox" id="<?php echo 'checkbox' . $j ?>" class="input_checkbox">
+
+						<td class="cell_dropdown">
+							<div class="dropdown">
+								<input type="button" onclick="myFunction(<?php echo $j?>)" class="dropbtn" value="">
+								<div id="<?php echo "myDropdown" . $j?>" class="dropdown-content">
+									<input type="button" name="restaurar" value="Restaurar" class="btn_restaurar" id="<?php echo $j?>">
+									<input type="button" name="eliminar" value="Eliminar" class="btn_eliminar" id="<?php echo $j?>">
+									<input type="button" name="vermas" value="Ver mas detalles" class="btn_vermas" id="<?php echo $j?>">
+								</div>
+							</div>
 						</td>
+
 						<td class="cell cell_codigo">
 							<input required readonly type="text" class="input_text" name="<?php echo 'Codigo' . $j ?>" value="<?php echo $r->Codigo ?>">
 						</td>
@@ -155,7 +165,6 @@
 	<script type="text/javascript" src="js/select_background.js"></script>
 	<script type="text/javascript" src="js/insertar_nuevo_registro.js"></script>
 	<script type="text/javascript" src="js/borrar_celda.js"></script>
-	<script type="text/javascript" src="js/checkbox_background.js"></script>
 	<script type="text/javascript" src="js/switch_bloquear_desbloquear.js"></script>
 
 
@@ -163,7 +172,6 @@
 		copy_animation();
 		select_background();
 		borrar_celda();
-		checkbox_background();
 	</script>
 	<script type="text/javascript">
 		// Al presionar enter sobre cualquier celda, evitar que se haga un POST sobre el formulario
@@ -176,7 +184,27 @@
 
 		document.getElementById('form').onkeypress = checkEnter;
 	</script>
+	<script>
+		function myFunction(id) {
+			document.getElementById(`myDropdown${id}`).classList.toggle("show");
+		}
 
+
+
+
+
+		window.onclick = function(event) {
+
+		var dropdowns = document.getElementsByClassName("dropdown-content");
+		for (i = 0; i < dropdowns.length; i++) {
+			var openDropdown = dropdowns[i];
+			if (openDropdown.classList.contains('show')) {
+				openDropdown.classList.remove('show');
+			}
+		}
+			myFunction(event.target.nextElementSibling.firstElementChild.id);
+		}
+	</script>
 </body>
 
 </html>

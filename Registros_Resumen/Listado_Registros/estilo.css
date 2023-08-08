@@ -296,6 +296,7 @@ select:focus{
 }
 
 
+
 tr.header .cell_switch{
 	position: sticky;
 	left: 0px;
@@ -303,7 +304,6 @@ tr.header .cell_switch{
 	margin: 0;
 	padding: 0;
 }
-
 
 tr.row .cell_switch{
 	position: sticky;
@@ -313,7 +313,7 @@ tr.row .cell_switch{
 	padding: 0;
 }
 
-.cell_checkbox{
+.cell_dropdown{
 	position: sticky;
 	left: calc(50px);
 	z-index: 4;
@@ -325,13 +325,13 @@ tr.row .cell_switch{
 
 .cell_codigo{
 	position: sticky;
-	left: calc(50px + 20px);
+	left: calc(50px + 32px);
 	z-index: 3;
 }
 
 .cell_nombre{
 	position: sticky;
-	left: calc( var(--cell-width)  + 50px + 20px);
+	left: calc( var(--cell-width)  + 50px + 32px);
 	z-index: 4;
 }
 
