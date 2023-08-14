@@ -1,18 +1,19 @@
 .dropbtn {
     border:none;
     cursor: pointer;
-    width: 2rem;
+    width: 1.3rem;
     height: auto;
     padding: 2px;
     text-align: center;
-    background: url("/SistemaCargaProyectos/svg/ellipsis-vertical-solid.svg") no-repeat scroll;
-    background-size: 0.35rem;
+    background: url("/SistemaCargaProyectos/svg/square-caret-down-solid.svg") no-repeat scroll;
+    background-size: 1rem;
     background-position: 50% 50%;
+    position:relative;
+    top:1.5px;
   }
   
   .dropbtn:hover, .dropbtn:focus {
-    box-shadow: 0px 0px 22px 8px rgba(0,0,0,0.25) inset;
-    border-radius: 50px;
+ 
   }
   
   .dropdown {
@@ -28,9 +29,9 @@
     text-align: center;
     background-color: #dee1e6;
     box-shadow: 0px 1px 2px 2px rgba(0,0,0,0.3);
-    z-index: 1;
-    right: 35%;
-    top:5%;
+    z-index: 10;
+    left: 105%;
+    top:0%;
   }
   
   .show {display: block;}
@@ -55,24 +56,10 @@
   }
   
   
-.btn_restaurar{
-      background: url(iconos/view-refresh.svg) no-repeat scroll;
-      background-size: 18px;
-      background-position: 0% 50%;
-      filter: brightness(100%) saturate(200%);
-  }
-  
-.btn_restaurar:hover{
-      cursor: pointer;
-      color: #000;
-      filter: brightness(60%) saturate(500%);
-      box-shadow: 0px 0px 10rem 10rem rgba(0,0,0,0.15) inset;
-  }
-  
-  
-  
+
+
 .btn_eliminar{
-      background: url(iconos/FX13_trashcan.svg) no-repeat scroll;
+      background: url("/SistemaCargaProyectos/svg/FX13_trashcan.svg") no-repeat scroll;
       background-size: 14px;
       filter: brightness(100%) saturate(400%);
   }
@@ -84,17 +71,3 @@
       box-shadow: 0px 0px 10rem 10rem rgba(0,0,0,0.15) inset;
   }
   
-  
-  .btn_vermas{
-      background: url(iconos/antsorin-Magnifying-Glass-Color.svg) no-repeat scroll;
-      background-size: 14px;
-      filter: brightness(100%) saturate(400%);
-  }
-  
-  .btn_vermas:hover{
-      cursor: pointer;
-      color: #000;
-      filter: brightness(100%) saturate(800%);
-      box-shadow: 0px 0px 10rem 10rem rgba(0,0,0,0.15) inset;
-  
-  }

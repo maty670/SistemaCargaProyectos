@@ -29,9 +29,6 @@ body{
     background-size: cover;
 }
 
-
-
-
 input[type="date"]:in-range::-webkit-datetime-edit-year-field{
 	color: transparent; 
 } 
@@ -215,8 +212,8 @@ tr.row td.cell input
 
 
 
-tr.row input{
-	background-color: #fff;
+tr.row input[type=text]{
+	
 }
 
 tr.row:nth-child(even) input.input_text:read-only{
@@ -256,7 +253,7 @@ tr.row:nth-child(odd) input.block{
 input.input_text:focus,
 select:focus{
 	outline: none;
-	box-shadow: 0px 0px 3px 1px rgba(0,0,0,1) inset !important;
+	box-shadow: 0px 0px 1px 1px rgba(0,0,0,1) inset !important;
 }
 
 
@@ -267,7 +264,7 @@ select:focus{
 
 
 #input_checked{
-	box-shadow: 20px 20px 20px 20px rgba(0,0,0,1) inset !important;
+  box-shadow: 20px 20px 20px 20px rgba(0,0,0,1) inset !important;
   color: #fff;
 }
 
@@ -287,6 +284,7 @@ select:focus{
   background-position: 0 0, 0 100%, 0 0, 100% 0;
   cursor: pointer;
   animation: linearGradientMove 0.55s infinite linear;
+  background-color: #fff;;
 }
 
 @keyframes linearGradientMove {
@@ -325,13 +323,13 @@ tr.row .cell_switch{
 
 .cell_codigo{
 	position: sticky;
-	left: calc(50px + 32px);
+	left: calc(72px);
 	z-index: 3;
 }
 
 .cell_nombre{
 	position: sticky;
-	left: calc( var(--cell-width)  + 50px + 32px);
+	left: calc( var(--cell-width)  + 40px + 32px);
 	z-index: 4;
 }
 

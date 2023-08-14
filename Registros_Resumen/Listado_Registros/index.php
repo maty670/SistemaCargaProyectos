@@ -85,9 +85,7 @@
 							<div class="dropdown">
 								<input type="button" onclick="myFunction(<?php echo $j?>)" class="dropbtn" value="">
 								<div id="<?php echo "myDropdown" . $j?>" class="dropdown-content">
-									<input type="button" name="restaurar" value="Restaurar" class="btn_restaurar" id="<?php echo $j?>">
 									<input type="button" name="eliminar" value="Eliminar" class="btn_eliminar" id="<?php echo $j?>">
-									<input type="button" name="vermas" value="Ver mas detalles" class="btn_vermas" id="<?php echo $j?>">
 								</div>
 							</div>
 						</td>
